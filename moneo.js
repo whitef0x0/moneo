@@ -243,7 +243,7 @@ module.exports = function (neo4jOptions) {
                     }, {});
                     createNode(doc.constructor.modelName, doc._id, doc.constructor.collection.name, doc.constructor.modelName, docProps, next);
                 },
-                function (next) {
+                /*function (next) {
                     //Merge relations:
 
                     var refs = findSimpleRefs();
@@ -265,7 +265,7 @@ module.exports = function (neo4jOptions) {
                             var id = ref.value instanceof mongoose.Types.ObjectId ? ref.value : ref.value._id;
                             createRelation(ref.name, doc._id, id, ref.props, next);
                         }
-                    }, next);
+                    }, next);*/
                 }
             ], next);
         });
