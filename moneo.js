@@ -213,7 +213,7 @@ module.exports = function (neo4jOptions) {
                             props: nestedTypeProps.filter(function (nProp) {
                                 return nProp !== relProp;
                             }).reduce(function (obj, nProp) {
-z                                obj[nProp.path] = value[nProp.path];
+                                obj[nProp.path] = value[nProp.path];
                                 return obj;
                             }, {}),
                             value: value[relProp.path]
